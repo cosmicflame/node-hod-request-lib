@@ -1,0 +1,58 @@
+{
+    "apiTypes": {
+        "sync": "sync",
+        "async": "async",
+        "platform": "platform"
+    },
+    "queryPrintOptions": {
+        "all": "all",
+        "allSections": "all_sections",
+        "date": "date",
+        "fields": "fields",
+        "none": "none",
+        "noResults": "no_results",
+        "parametric": "parametric",
+        "reference": "reference"
+    },
+    "queryResultsLimit": 2500,
+    "jobStatuses": {
+        "queued": "queued",
+        "inProgress": "in progress",
+        "finished": "finished",
+        "failed": "failed"
+    },
+    "incompleteJobStatusCodes": [
+        400,
+        401,
+        402,
+        403,
+        404,
+        500,
+        501,
+        502
+    ],
+    "sentimentLanguages": {
+        "eng": "eng",
+        "fre": "fre",
+        "spa": "spa",
+        "ger": "ger",
+        "ita": "ita",
+        "chi": "chi",
+        "por": "por",
+        "dut": "dut",
+        "rus": "rus",
+        "cze": "cze",
+        "tur": "tur"
+    },
+    "textIndexFlavors": {
+        "standard": "standard",
+        "categorization": "categorizaion",
+        "customFields": "custom_fields",
+        "queryManipulation": "querymanipulation",
+        "explorer": "explorer"
+    },
+    "tokenTypes": {
+        "simple": "simple",
+        "hmac": "hmac_sha1"
+    }
+}
