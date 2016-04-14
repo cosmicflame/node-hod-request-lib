@@ -1,20 +1,42 @@
-# express-hod-sso
+# node-hod-request-lib
 
-[Express](http://expressjs.com/) (4.x) middleware for securing routes using [HPE Haven OnDemand](http://www.havenondemand.com) SSO.
+A client library for communicating with [HPE Haven OnDemand](http://www.havenondemand.com) (HoD).
 
-Designed for use with the node-hod-request-lib, [hod-sso-js](https://github.com/hpe-idol/hod-sso-js) and a compatible token repository.
+node-hod-request-lib currently only supports HoD platform version 2.
+
+Only a subset of HoD APIs are currently available through the library.
 
 ## Usage
 
-express-hod-sso exposes an Express Router for use as middleware/routing:
+node-hod-request-lib exposes a constructor for instantiating the library with various configuration options:
 
-    var ssoRouter = require('express-hod-sso');
+    var HodRequestLib = require('hod-request-lib');
+    var hodRequestLib = new HodRequestLib(opts);
 
-    app.use(ssoRouter(apiKey, {
-        allowedOrigins: allowedOrigins,
-        hodRequestLib: hodRequestLib,
+    // Make a request
+    hodRequestLib.analyzeSentimentSync(
+        text,
+        language,
+        tokenProxy,
+        callback
+    );
+
+The following useful utilities are also exposed:
+
+    // Utility for generating various token strings
+    var tokens = require('hod-request-lib').tokens
+
+    // Utility for signing requests, needed for authentication
+    var signing = require('hod-request-lib').signing
+
+    // In-memory token repository implementation
+    // An instance of this can be used as the tokenRepository configuration option when instnatiating the library
+    var SimpleTokenRepository = require('hod-request-lib').SimpleTokenRepository;
+    var tokenRepository = new SimpleTokenRepository();
+
+    var hodRequestLib new HodRequestLib({
         tokenRepository: tokenRepository
-    }));
+    });
 
 ## License
 Copyright 2016 Hewlett Packard Enterprise Development LP
