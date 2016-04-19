@@ -1,9 +1,18 @@
 language: node_js
 node_js:
-  - "5"
-  - "5.1"
-  - "4"
-  - "4.2"
-  - "4.1"
-  - "4.0"
-  - "0.12"
+- '5'
+- '5.1'
+- '4'
+- '4.2'
+- '4.1'
+- '4.0'
+- '0.12'
+deploy:
+  provider: npm
+  email: hpe-idol-oss@groups.ext.hpe.com
+  api_key:
+    secure: BJBfJVHhxuHe5HU5krBcsx8x5Sa/N1AMh2pp5AUCZ4rdZ0lDncIK+ZxtlSYX7z80HklexG4OQV5LjfXvXPhflsxLOgDdBa9UkZPzeCgtxMcpLL7HUcqOqNVyM9SSdA5Vw21Yfc8pSLwO/+MjaWDCInfDNAr9agNC21oVgm7CbSaFXeX2mbMeoagrW7zBZCkxonYFm+dgwBgQ8gPxcq0q1bvc4EX6pcwqRPmDbGoDrAZrnDPxSgrBOD7dzeKpjuyos3iEGYInPF6rfTVaxwXeBF1vFJtxtgjh9XT7W/Yx572TSw2Q1CRDxcWdXy4KY9YZ0qT9YfBAZmkFOSR3Gkw30E1E1ZLcMQlzPAgd6Dzn695sfLPtnU3s04Wb9vKW0qaG4DwzSd/ANJaUH3Dy+QYxQqAfTEAdPvTQxcnlf4CGCrE1ZPrgIGfj8TKjn6shryhpo32MjueatFHwXg6DvFduW0jGjkBWBIOcl67SoRRdPlZoLd7gc2pDqc7a2ZbdQrdFVaAUkMibOBqiO3sDTaYsPOSJ08d0CAqRclQxq+peKsMwj3jH2SN61yDDNtPTpmqBPdIC1YEuphPcF19ZSNJ7ugZPo955ry7t4TyBDJXPReIfQ3bIed70qspvno/s0yoRdUhtoyAPQBUzpoEbAojTa0HesIeabNIh+B2SLo9mmPU=
+  on:
+    branch: master
+    tags: true
+    repo: hpe-idol/node-hod-request-lib
