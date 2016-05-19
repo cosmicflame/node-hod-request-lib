@@ -1,7 +1,7 @@
 var _ = require('underscore');
 var async = require('async');
 
-var hodJobStatuses = require('../strings').jobStatuses;
+var hodJobStatuses = require('../strings').internal.jobStatuses;
 var debug = require('./services/debug');
 
 var retryStatuses = [

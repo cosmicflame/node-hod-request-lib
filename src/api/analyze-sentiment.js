@@ -1,4 +1,3 @@
-var strings = require('../../strings');
 var HodRequest = require('../models/hod-request');
 var make = require('../make-request');
 

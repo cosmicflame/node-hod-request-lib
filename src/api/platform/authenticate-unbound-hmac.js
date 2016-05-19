@@ -5,13 +5,13 @@ var make = require('../../make-request');
 module.exports = function (apikey, callback) {
     make(new HodRequest(this.config, null, {
         method: 'POST',
-        type: strings.apiTypes.platform,
+        type: strings.internal.apiTypes.platform,
         path: [
             'authenticate',
             'unbound'
         ],
         params: {
-            token_type: strings.tokenTypes.hmac,
+            token_type: strings.internal.tokenTypes.hmac,
             enable_sso: 'true'
         },
         headers: {

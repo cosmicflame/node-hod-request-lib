@@ -51,7 +51,7 @@ function checkRefresh(resp, tokenProxy, tokenRepository, callback) {
 
 function checkError(err, hodResponse, statusCode, callback) {
 
-    if (err || _.contains(strings.incompleteJobStatusCodes, statusCode) || hodResponse.error) {
+    if (err || _.contains(strings.internal.incompleteJobStatusCodes, statusCode) || hodResponse.error) {
         var errorMessageDetail = err || hodResponse.error || '';
         var errorMessage = 'HoD request ' + (hodResponse.jobId || '') + ' was unsuccessful or has thrown error. ' + errorMessageDetail;
 

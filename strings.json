@@ -1,58 +1,73 @@
 {
-    "apiTypes": {
-        "sync": "sync",
-        "async": "async",
-        "platform": "platform"
-    },
+  "external": {
     "queryPrintOptions": {
-        "all": "all",
-        "allSections": "all_sections",
-        "date": "date",
-        "fields": "fields",
-        "none": "none",
-        "noResults": "no_results",
-        "parametric": "parametric",
-        "reference": "reference"
+      "all": "all",
+      "allSections": "all_sections",
+      "date": "date",
+      "fields": "fields",
+      "none": "none",
+      "noResults": "no_results",
+      "parametric": "parametric",
+      "reference": "reference"
     },
     "queryResultsLimit": 2500,
-    "jobStatuses": {
-        "queued": "queued",
-        "inProgress": "in progress",
-        "finished": "finished",
-        "failed": "failed"
+    "resourceFlavors": {
+      "standard": "standard",
+      "categorization": "categorizaion",
+      "customFields": "custom_fields",
+      "queryManipulation": "querymanipulation",
+      "explorer": "explorer",
+      "jumbo": "jumbo",
+      "webCloud": "web_cloud",
+      "filesystemOnsite": "filesystem_onsite",
+      "sharepointOnsite": "sharepoint_onsite",
+      "dropboxCloud": "dropbox_cloud"
+    },
+    "resourceTypes": {
+      "content": "content",
+      "connector": "connector",
+      "queryProfile": "query_profile",
+      "schedule": "schedule"
+    },
+    "sentimentLanguages": {
+      "english": "eng",
+      "french": "fre",
+      "spanish": "spa",
+      "german": "ger",
+      "italian": "ita",
+      "chinese": "chi",
+      "portuguese": "por",
+      "dutch": "dut",
+      "russian": "rus",
+      "czech": "cze",
+      "turkish": "tur"
+    }
+  },
+  "internal": {
+    "apiTypes": {
+      "sync": "sync",
+      "async": "async",
+      "platform": "platform"
     },
     "incompleteJobStatusCodes": [
-        400,
-        401,
-        402,
-        403,
-        404,
-        500,
-        501,
-        502
+      400,
+      401,
+      402,
+      403,
+      404,
+      500,
+      501,
+      502
     ],
-    "sentimentLanguages": {
-        "eng": "eng",
-        "fre": "fre",
-        "spa": "spa",
-        "ger": "ger",
-        "ita": "ita",
-        "chi": "chi",
-        "por": "por",
-        "dut": "dut",
-        "rus": "rus",
-        "cze": "cze",
-        "tur": "tur"
-    },
-    "textIndexFlavors": {
-        "standard": "standard",
-        "categorization": "categorizaion",
-        "customFields": "custom_fields",
-        "queryManipulation": "querymanipulation",
-        "explorer": "explorer"
+    "jobStatuses": {
+      "queued": "queued",
+      "inProgress": "in progress",
+      "finished": "finished",
+      "failed": "failed"
     },
     "tokenTypes": {
-        "simple": "simple",
-        "hmac": "hmac_sha1"
+      "simple": "simple",
+      "hmac": "hmac_sha1"
     }
+  }
 }

@@ -85,7 +85,7 @@ describe('HoD Request Model', function() {
 
         it('should return the appropriate path if the type is sync or async', function () {
             hodRequest = new HodRequest(config, 'token', {
-                type: strings.apiTypes.sync,
+                type: strings.internal.apiTypes.sync,
                 path: [
                     'one',
                     'two'
@@ -96,7 +96,7 @@ describe('HoD Request Model', function() {
 
         it('should return the appropriate path if the type is platform', function () {
             hodRequest = new HodRequest(config, 'token', {
-                type: strings.apiTypes.platform,
+                type: strings.internal.apiTypes.platform,
                 path: [
                     'one',
                     'two'

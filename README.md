@@ -23,6 +23,9 @@ node-hod-request-lib exposes a constructor for instantiating the library with va
 
 The following useful utilities are also exposed:
 
+    // Various useful constants
+    var enums = require('hod-request-lib').enums
+
     // Utility for generating various token strings
     var tokens = require('hod-request-lib').tokens
 
@@ -30,7 +33,7 @@ The following useful utilities are also exposed:
     var signing = require('hod-request-lib').signing
 
     // In-memory token repository implementation
-    // An instance of this can be used as the tokenRepository configuration option when instnatiating the library
+    // An instance of this can be used as the tokenRepository configuration option
     var SimpleTokenRepository = require('hod-request-lib').SimpleTokenRepository;
     var tokenRepository = new SimpleTokenRepository();
 
