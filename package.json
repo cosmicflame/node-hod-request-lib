@@ -2,7 +2,7 @@
   "name": "hod-request-lib",
   "version": "0.0.3",
   "description": "A client library for calling HPE Haven OnDemand from Node.js",
-  "repository": "hpe-idol/node-hod",
+  "repository": "hpe-idol/node-hod-request-lib",
   "main": "index.js",
   "scripts": {
     "test": "mocha --require should",
