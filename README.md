@@ -23,6 +23,9 @@ node-hod-request-lib exposes a constructor for instantiating the library with va
 
 The following useful utilities are also exposed:
 
+    // Various useful constants
+    var enums = require('hod-request-lib').enums
+
     // Utility for generating various token strings
     var tokens = require('hod-request-lib').tokens
 
