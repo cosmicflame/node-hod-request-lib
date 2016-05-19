@@ -19,7 +19,7 @@ module.exports = function(type) {
                     field_text: opts.fieldText || '',
                     indexes: opts.indexes,
                     max_page_results: opts.maxPageResults,
-                    print: opts.print || strings.queryPrintOptions.none,
+                    print: opts.print || strings.external.queryPrintOptions.none,
                     print_fields: opts.printFields.join(',') || '',
                     start: opts.start || 1,
                     total_results: opts.totalResults || false

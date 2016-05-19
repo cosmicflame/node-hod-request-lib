@@ -6,7 +6,7 @@ module.exports = function (jobId, tokenProxy, callback) {
     var config = this.config;
     config.tokenRepository.get(tokenProxy, function(err, token) {
         make(new HodRequest(config, token, {
-            type: strings.apiTypes.platform,
+            type: strings.internal.apiTypes.platform,
             path: [
                 'job',
                 jobId,

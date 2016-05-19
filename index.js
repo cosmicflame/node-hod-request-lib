@@ -16,6 +16,7 @@ exports = module.exports = HodRequestLib;
  */
 exports.tokens = tokens.tokens;
 exports.signing = tokens.signing;
+exports.enums = strings.external;
 exports.SimpleTokenRepository = SimpleTokenRepository;
 
 function HodRequestLib(config) {
@@ -45,8 +46,8 @@ for (var platformApiName in platform) {
 //TODO: Object.keys
 for (var apiName in api) {
     if (api.hasOwnProperty(apiName)) {
-        HodRequestLib.prototype[apiName + 'Sync'] = api[apiName](strings.apiTypes.sync);
-        HodRequestLib.prototype[apiName + 'Async'] = api[apiName](strings.apiTypes.async);
-        HodRequestLib.prototype[apiName + 'PollingService'] = pollingService(api[apiName](strings.apiTypes.async), HodRequestLib.prototype.jobStatus);
+        HodRequestLib.prototype[apiName + 'Sync'] = api[apiName](strings.internal.apiTypes.sync);
+        HodRequestLib.prototype[apiName + 'Async'] = api[apiName](strings.internal.apiTypes.async);
+        HodRequestLib.prototype[apiName + 'PollingService'] = pollingService(api[apiName](strings.internal.apiTypes.async), HodRequestLib.prototype.jobStatus);
     }
 }

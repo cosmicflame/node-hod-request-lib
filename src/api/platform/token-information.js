@@ -4,7 +4,7 @@ var make = require('../../make-request');
 
 module.exports = function (token, callback) {
     make(new HodRequest(this.config, null, {
-        type: strings.apiTypes.platform,
+        type: strings.internal.apiTypes.platform,
         path: [
             'authenticate'
         ],

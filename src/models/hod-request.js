@@ -10,7 +10,7 @@ module.exports = HodRequest;
 
 function HodRequest(config, token, opts) {
     this.method = 'GET';
-    this.type = strings.apiTypes.sync;
+    this.type = strings.internal.apiTypes.sync;
     this.params = {};
     this.headers = {};
     this.formData = {};
@@ -44,7 +44,7 @@ HodRequest.prototype.getUrl = function () {
 };
 
 HodRequest.prototype.getPath = function () {
-    if (this.type === strings.apiTypes.sync || this.type === strings.apiTypes.async) {
+    if (this.type === strings.internal.apiTypes.sync || this.type === strings.internal.apiTypes.async) {
         return [
             this.majorVersion,
             'api',
